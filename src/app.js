@@ -23,7 +23,7 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'weather',
+        title: 'Weather',
         name: ' Marvin Rojas'
     })
 })
@@ -31,7 +31,7 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About me',
-        name: ' Marvin Rojas'
+        name: 'Marvin Rojas, node.js student.'
     })
 })
 
@@ -39,8 +39,8 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         name: ' Marvin Rojas',
-        tip: 'tip number 1',
-        tip2: 'tip number 2'
+        tip: 'Go to the home page and input a location or zip code.',
+        tip2: 'If you run into any issues or have to report a bug contact the site administrator.'
     })
 })
 
