@@ -31,7 +31,7 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About me',
-        name: 'Marvin Rojas, node.js student.'
+        name: 'Marvin Rojas'
     })
 })
 
@@ -89,8 +89,8 @@ app.get('/products', (req, res) => {
 
 app.get('/help/*', (req, res) => {
     res.render('helpMissing', {
-        title: 'Help not found',
-        error: 'Help article not found',
+        title: 'Help article not found',
+        error: 'Please click home to go back to the home page',
         name: ' Marvin Rojas'
     })
 })
