@@ -58,16 +58,19 @@ app.get('/weather', (req, res) => {
                 error
             })
         }
-        weather(longitude, latitude, (error, weatherData) => {
+        weather(longitude, latitude, (error, {temperature, weather_descriptions, weather_icons} = {} ) => {
             if(error) {
                 return res.send({
                     error
                 })
             }
+
+            const weatherData = 'Temperature is currently ' + temperature + 'c' + ' and the sky is ' + weather_descriptions 
             res.send({
                 forecast: weatherData,
                 location: location,
-                adress: req.query.adress
+                address: req.query.address,
+                weather_icons
             })
         })
 
